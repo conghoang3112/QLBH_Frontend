@@ -1,0 +1,123 @@
+{
+  "app": {
+    "searchNotData": "Không có kết quả tìm kiếm",
+    "toSearch": "để tìm kiếm",
+    "toNavigate": "để điều hướng"
+  },
+  "countdown": {
+    "normalText": "Nhận mã SMS",
+    "sendText": "Nhận lại trong {0}s"
+  },
+  "cropper": {
+    "selectImage": "Chọn Ảnh",
+    "uploadSuccess": "Tải lên thành công!",
+    "modalTitle": "Tải ảnh đại diện",
+    "okText": "Xác nhận và tải lên",
+    "btn_reset": "Đặt lại",
+    "btn_rotate_left": "Xoay ngược chiều kim đồng hồ",
+    "btn_rotate_right": "Xoay theo chiều kim đồng hồ",
+    "btn_scale_x": "Lật ngang",
+    "btn_scale_y": "Lật dọc",
+    "btn_zoom_in": "Phóng to",
+    "btn_zoom_out": "Thu nhỏ",
+    "preview": "Xem trước"
+  },
+  "drawer": {
+    "loadingText": "Đang tải...",
+    "cancelText": "Đóng",
+    "okText": "Xác nhận"
+  },
+  "excel": {
+    "exportModalTitle": "Xuất dữ liệu",
+    "fileType": "Loại tệp",
+    "fileName": "Tên tệp"
+  },
+  "form": {
+    "putAway": "Thu gọn",
+    "unfold": "Mở rộng",
+    "maxTip": "Số ký tự phải ít hơn {0}",
+    "apiSelectNotFound": "Vui lòng đợi cho đến khi tải dữ liệu hoàn thành..."
+  },
+  "icon": {
+    "placeholder": "Nhấp để chọn biểu tượng",
+    "search": "Tìm kiếm biểu tượng",
+    "copy": "Sao chép biểu tượng thành công!"
+  },
+  "menu": {
+    "search": "Tìm kiếm trong Menu"
+  },
+  "modal": {
+    "cancelText": "Đóng",
+    "okText": "Xác nhận",
+    "close": "Đóng",
+    "maximize": "Phóng to",
+    "restore": "Phục hồi"
+  },
+  "table": {
+    "settingDens": "Mật độ",
+    "settingDensDefault": "Mặc định",
+    "settingDensMiddle": "Trung bình",
+    "settingDensSmall": "Kín",
+    "settingColumn": "Cài đặt cột",
+    "settingColumnShow": "Hiển thị cột",
+    "settingIndexColumnShow": "Cột chỉ mục",
+    "settingSelectColumnShow": "Cột lựa chọn",
+    "settingFixedLeft": "Cố định bên trái",
+    "settingFixedRight": "Cố định bên phải",
+    "settingFullScreen": "Toàn màn hình",
+    "index": "STT",
+    "total": "tổng cộng {total}"
+  },
+  "time": {
+    "before": " trước",
+    "after": " sau",
+    "just": "ngay bây giờ",
+    "seconds": " giây",
+    "minutes": " phút",
+    "hours": " giờ",
+    "days": " ngày"
+  },
+  "tree": {
+    "selectAll": "Chọn tất cả",
+    "unSelectAll": "Bỏ chọn tất cả",
+    "expandAll": "Mở rộng tất cả",
+    "unExpandAll": "Thu gọn tất cả",
+    "checkStrictly": "Liên kết theo cấp",
+    "checkUnStrictly": "Độc lập theo cấp"
+  },
+  "upload": {
+    "save": "Lưu",
+    "upload": "Tải lên",
+    "imgUpload": "Tải lên ảnh",
+    "uploaded": "Đã tải lên",
+    "operating": "Đang thực hiện",
+    "del": "Xóa",
+    "download": "Tải xuống",
+    "saveWarn": "Vui lòng đợi cho đến khi tệp tải lên và lưu!",
+    "saveError": "Không có tệp được tải lên thành công và không thể lưu!",
+    "preview": "Xem trước",
+    "choose": "Chọn tệp",
+    "accept": "Hỗ trợ định dạng {0}",
+    "acceptUpload": "Chỉ tải lên tệp trong định dạng {0}",
+    "maxSize": "Một tệp không vượt quá {0}MB",
+    "maxSizeMultiple": "Chỉ tải lên tệp lên đến {0}MB!",
+    "maxNumber": "Chỉ tải lên tối đa {0} tệp",
+    "legend": "Chú giải",
+    "fileName": "Tên tệp",
+    "fileSize": "Kích thước tệp",
+    "fileStatue": "Trạng thái tệp",
+    "startUpload": "Bắt đầu tải lên",
+    "uploadSuccess": "Tải lên thành công",
+    "uploadError": "Tải lên thất bại",
+    "uploading": "Đang tải lên",
+    "uploadWait": "Vui lòng đợi cho đến khi tệp tải lên hoàn thành",
+    "reUploadFailed": "Tải lên lại các tệp thất bại"
+  },
+  "verify": {
+    "error": "Xác thực thất bại!",
+    "time": "Xác thực thành công và mất {time} giây!",
+    "redoTip": "Nhấp vào hình ảnh để làm mới",
+    "dragText": "Giữ thanh trượt và kéo",
+    "successText": "Đã xác thực"
+  }
+}
