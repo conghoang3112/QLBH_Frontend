@@ -3,6 +3,7 @@
     "operationSuccess": "Thực hiện thành công",
     "operationFailed": "Thực hiện thất bại",
     "errorTip": "Error Tip",
+    "errorLogin": "Lỗi đăng nhập",
     "successTip": "Success Tip",
     "errorMessage": "Hoạt động thất bại, hệ thống bất thường!",
     "timeoutMessage": "Đăng nhập đã hết hạn, vui lòng đăng nhập lại!",
@@ -90,6 +91,7 @@
     "email": "Email",
     "smsCode": "Mã SMS",
     "mobile": "Số điện thoại di động",
-    "otp": "Mã OTP"
+    "otp": "Mã OTP",
+    "invalidCredentials": "Tài khoản, mật khẩu không đúng, vui lòng nhập lại"
   }
 }
