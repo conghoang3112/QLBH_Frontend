@@ -83,6 +83,7 @@
 </template>
 <script lang="ts" setup>
   import { reactive, ref, unref, computed } from 'vue'
+  import md5 from 'md5'
 
   import { Checkbox, Form, Input, Row, Col, Button, Divider } from 'ant-design-vue'
   import {
@@ -119,8 +120,8 @@
   const rememberMe = ref(false)
 
   const formData = reactive({
-    account: 'vben',
-    password: '123456',
+    account: '',
+    password: '',
   })
 
   const { validForm } = useFormValid(formRef)
@@ -135,14 +136,14 @@
     try {
       loading.value = true
       const userInfo = await userStore.login({
-        password: data.password,
+        password: md5(data.password),
         username: data.account,
         mode: 'none', //不要默认的错误提示
       })
       if (userInfo) {
         notification.success({
           message: t('sys.login.loginSuccessTitle'),
-          description: `${t('sys.login.loginSuccessDesc')}: ${userInfo.realName}`,
+          description: `${t('sys.login.loginSuccessDesc')}: ${userInfo.fullName}`,
           duration: 3,
         })
       }

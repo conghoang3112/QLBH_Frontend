@@ -36,12 +36,9 @@ export interface ErrorLogInfo {
 }
 
 export interface UserInfo {
-  userId: string | number
-  username: string
-  realName: string
-  avatar: string
-  desc?: string
-  homePath?: string
+  id: string | number
+  userMame: string
+  fullName: string
   roles: RoleInfo[]
 }
 

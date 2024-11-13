@@ -16,8 +16,11 @@ import { RouteRecordRaw } from 'vue-router'
 import { PAGE_NOT_FOUND_ROUTE } from '@/router/routes/basic'
 import { isArray } from '@/utils/is'
 import { h } from 'vue'
+import { IPagination } from '../types/pagination'
 
 interface UserState {
+  _list?: any[]
+  _pagination: IPagination | undefined
   userInfo: Nullable<UserInfo>
   token?: string
   roleList: RoleEnum[]
@@ -28,6 +31,8 @@ interface UserState {
 export const useUserStore = defineStore({
   id: 'app-user',
   state: (): UserState => ({
+    _list: undefined as any[] | undefined,
+    _pagination: undefined as IPagination | undefined,
     // user info
     userInfo: null,
     // token
@@ -91,10 +96,10 @@ export const useUserStore = defineStore({
       try {
         const { goHome = true, mode, ...loginParams } = params
         const data = await loginApi(loginParams, mode)
-        const { token } = data
+        const { message }: any = data
 
         // save token
-        this.setToken(token)
+        this.setToken(`${message?.token_type} ${message.access_token}`)
         return this.afterLoginAction(goHome)
       } catch (error) {
         return Promise.reject(error)
@@ -103,7 +108,7 @@ export const useUserStore = defineStore({
     async afterLoginAction(goHome?: boolean): Promise<GetUserInfoModel | null> {
       if (!this.getToken) return null
       // get user info
-      const userInfo = await this.getUserInfoAction()
+      await this.getUserInfoAction()
 
       const sessionTimeout = this.sessionTimeout
       if (sessionTimeout) {
@@ -118,23 +123,24 @@ export const useUserStore = defineStore({
           router.addRoute(PAGE_NOT_FOUND_ROUTE as unknown as RouteRecordRaw)
           permissionStore.setDynamicAddedRoute(true)
         }
-        goHome && (await router.replace(userInfo?.homePath || PageEnum.BASE_HOME))
+        // goHome && (await router.replace(userInfo?.homePath || PageEnum.BASE_HOME))
+        goHome && (await router.replace(PageEnum.BASE_HOME)) //vào trang homepage, trang chính, home
       }
-      return userInfo
+      return getAuthCache<GetUserInfoModel>(USER_INFO_KEY)
     },
     async getUserInfoAction(): Promise<UserInfo | null> {
       if (!this.getToken) return null
       const userInfo = await getUserInfo()
-      const { roles = [] } = userInfo
-      if (isArray(roles)) {
-        const roleList = roles.map((item) => item.value) as RoleEnum[]
-        this.setRoleList(roleList)
-      } else {
-        userInfo.roles = []
-        this.setRoleList([])
-      }
-      this.setUserInfo(userInfo)
-      return userInfo
+      const response: any = userInfo.message
+      // if (isArray(roles)) {
+      //   const roleList = roles.map((item) => item.value) as RoleEnum[]
+      //   this.setRoleList(roleList)
+      // } else {
+      //   userInfo.roles = []
+      //   this.setRoleList([])
+      // }
+      this.setUserInfo(response ?? null)
+      return response ?? null
     },
     /**
      * @description: logout
