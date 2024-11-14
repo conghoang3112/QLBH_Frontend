@@ -1,26 +1,5 @@
 <template>
-  <div :class="prefixCls">
-    <Popover title="" trigger="click" :overlayClassName="`${prefixCls}__overlay`">
-      <Badge :count="count" dot :numberStyle="numberStyle">
-        <BellOutlined />
-      </Badge>
-      <template #content>
-        <Tabs>
-          <template v-for="item in listData" :key="item.key">
-            <Tabs.TabPane>
-              <template #tab>
-                {{ item.name }}
-                <span v-if="item.list.length !== 0">({{ item.list.length }})</span>
-              </template>
-              <!-- 绑定title-click事件的通知列表中标题是“可点击”的-->
-              <NoticeList :list="item.list" v-if="item.key === '1'" @title-click="onNoticeClick" />
-              <NoticeList :list="item.list" v-else />
-            </Tabs.TabPane>
-          </template>
-        </Tabs>
-      </template>
-    </Popover>
-  </div>
+  <div :class="prefixCls"> </div>
 </template>
 <script lang="ts" setup>
   import { computed, ref } from 'vue'
